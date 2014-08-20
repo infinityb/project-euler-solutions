@@ -37,6 +37,5 @@ fn main() {
 
 #[test]
 fn test_euler_result() {
-    let factors: Vec<u64> = factor(13195).collect();
-    assert_eq!(factors, vec![5, 7, 13, 29]);
+    assert_eq!(factor(13195).collect::<Vec<u64>>(), vec![5, 7, 13, 29]);
 }
