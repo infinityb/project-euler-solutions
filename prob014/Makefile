@@ -1,2 +1,6 @@
-prob14: main.rs
-	rustc -O -o prob14 main.rs
+prob014: main.rs
+	rustc -O -o prob014 main.rs
+
+
+clean:
+	rm prob014
