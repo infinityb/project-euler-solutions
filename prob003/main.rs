@@ -26,6 +26,8 @@ fn factor(num: u64) -> SimpleFactoringIterator {
     }
 }
 
+
+#[cfg(not(test))]
 fn main() {
     let mut biggest = 0;
     for prime_factor in factor(600851475143) {

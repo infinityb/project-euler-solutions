@@ -1,3 +1,4 @@
+#[cfg(not(test))]
 use std::sync::deque::{BufferPool, Data, Empty, Abort};
 
 type CollatzInt = u64;
@@ -21,6 +22,7 @@ fn collatz_length(num: CollatzInt) -> u32 {
     iteration
 }
 
+#[cfg(not(test))]
 fn main() {
     let (tx, rx) = channel();
     let (worker, stealer) = BufferPool::new().deque();
@@ -33,7 +35,7 @@ fn main() {
 
     for _ in range(0, jobs) {
         let child_stealer = stealer.clone();
-	let finish_tx = tx.clone();
+        let finish_tx = tx.clone();
 
         spawn(proc() {
             let mut longest: (u32, CollatzInt) = (1, 1);
@@ -56,7 +58,7 @@ fn main() {
 
     let mut results = Vec::new();
     for _ in range(0, jobs) {
-	results.push(rx.recv());
+        results.push(rx.recv());
     }
 
     let mut longest: (CollatzInt, u32) = (1, 1);
@@ -68,4 +70,10 @@ fn main() {
     }
     let (len, num) = longest;
     println!("{} with length of {}", len, num);
+}
+
+
+#[test]
+fn test_euler_result() {
+    assert_eq!(collatz_length(13), 10);
 }

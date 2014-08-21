@@ -1,0 +1,48 @@
+[project]
+name = "infinityb-project-euler"
+version = "0.0.1"
+authors = ["Stacey Ell <stacey.ell@gmail.com>"]
+
+[lib]
+name = "commons"
+path = "commons/mod.rs"
+
+
+[[bin]]
+name = "prob001"
+path = "prob001/main.rs"
+
+
+[[bin]]
+name = "prob002"
+path = "prob002/main.rs"
+
+
+[[bin]]
+name = "prob003"
+path = "prob003/main.rs"
+
+
+[[bin]]
+name = "prob004"
+path = "prob004/main.rs"
+
+
+[[bin]]
+name = "prob006"
+path = "prob006/main.rs"
+
+
+[[bin]]
+name = "prob010"
+path = "prob010/main.rs"
+
+
+[[bin]]
+name = "prob014"
+path = "prob014/main.rs"
+
+
+# [[bin]]
+# name = "prob029"
+# path = "prob029/main.rs"
