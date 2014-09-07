@@ -33,9 +33,9 @@ name = "prob006"
 path = "prob006/main.rs"
 
 
-# [[bin]]
-# name = "prob009"
-# path = "prob009/main.rs"
+[[bin]]
+name = "prob007"
+path = "prob007/main.rs"
 
 
 [[bin]]
@@ -46,6 +46,11 @@ path = "prob010/main.rs"
 [[bin]]
 name = "prob014"
 path = "prob014/main.rs"
+
+
+[[bin]]
+name = "prob016"
+path = "prob016/main.rs"
 
 
 [[bin]]

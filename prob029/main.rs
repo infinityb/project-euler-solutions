@@ -34,7 +34,7 @@ fn test_euler_result() {
 
     let proditer = ProductIterator::new(
         range_inclusive(big2, big5).collect::<Vec<BigInt>>(),
-        range_inclusive(big2, big5).collect::<Vec<uint>>());
+        range_inclusive(2, 5).collect::<Vec<uint>>());
 
     let mut got = proditer.map(|(a, b)| pow(a, b)).collect::<Vec<BigInt>>();
     got.sort();
