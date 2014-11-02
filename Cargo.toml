@@ -56,3 +56,6 @@ path = "prob016/main.rs"
 [[bin]]
 name = "prob029"
 path = "prob029/main.rs"
+
+[dependencies.num]
+git = "https://github.com/rust-lang/num"

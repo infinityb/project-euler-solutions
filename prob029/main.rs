@@ -23,7 +23,7 @@ fn main() {
 
     let mut got = proditer.map(|(a, b)| pow(a, b)).collect::<Vec<BigInt>>();
     got.sort();
-    println!("len = {}", iterlen(uniq(got.move_iter())));
+    println!("len = {}", iterlen(uniq(got.into_iter())));
 }
 
 
