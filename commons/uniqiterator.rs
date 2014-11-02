@@ -48,12 +48,12 @@ pub fn uniq<A: PartialEq + Clone, B: Iterator<A>>(iterator: B) -> UniqIterator<A
 fn test_uniq_iter() {
     let nums = vec![0_u32, 0, 0, 1, 2, 3, 4, 4, 4, 5, 6, 6, 7, 7, 8, 9];
     let expected = vec![0_u32, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let got = uniq(nums.move_iter()).collect::<Vec<u32>>();
+    let got = uniq(nums.into_iter()).collect::<Vec<u32>>();
     assert_eq!(expected, got);
 
     let nums: Vec<u32> = vec![];
     let expected: Vec<u32> = vec![];
-    let got = uniq(nums.move_iter()).collect::<Vec<u32>>();
+    let got = uniq(nums.into_iter()).collect::<Vec<u32>>();
     assert_eq!(expected, got);
 
 }

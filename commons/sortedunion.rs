@@ -47,12 +47,12 @@ fn test_sorted_union_easy() {
 
     let nums_a: Vec<u32> = vec![1, 3, 5, 7, 9];
     let nums_b: Vec<u32> = vec![0, 2, 4, 6, 8];
-    let got: Vec<u32> = SortedUnion::new(nums_a.move_iter(), nums_b.move_iter()).collect();
+    let got: Vec<u32> = SortedUnion::new(nums_a.into_iter(), nums_b.into_iter()).collect();
     assert_eq!(got, expected);
 
     let nums_a: Vec<u32> = vec![1, 3, 5, 7, 9];
     let nums_b: Vec<u32> = vec![0, 2, 4, 6, 8];
-    let got: Vec<u32> = SortedUnion::new(nums_b.move_iter(), nums_a.move_iter()).collect();
+    let got: Vec<u32> = SortedUnion::new(nums_b.into_iter(), nums_a.into_iter()).collect();
     assert_eq!(got, expected);
 }
 
@@ -63,22 +63,22 @@ fn test_sorted_union_with_dups() {
 
     let nums_a: Vec<u32> = vec![1, 3, 5, 7, 9];
     let nums_b: Vec<u32> = vec![0, 2, 4, 4, 6, 8];
-    let got: Vec<u32> = SortedUnion::new(nums_a.move_iter(), nums_b.move_iter()).collect();
+    let got: Vec<u32> = SortedUnion::new(nums_a.into_iter(), nums_b.into_iter()).collect();
     assert_eq!(got, expected); 
 
     let nums_a: Vec<u32> = vec![1, 3, 5, 7, 9];
     let nums_b: Vec<u32> = vec![0, 2, 4, 4, 6, 8];
-    let got: Vec<u32> = SortedUnion::new(nums_b.move_iter(), nums_a.move_iter()).collect();
+    let got: Vec<u32> = SortedUnion::new(nums_b.into_iter(), nums_a.into_iter()).collect();
     assert_eq!(got, expected);
 
     let nums_a: Vec<u32> = vec![1, 3, 4, 5, 7, 9];
     let nums_b: Vec<u32> = vec![0, 2, 4, 6, 8];
-    let got: Vec<u32> = SortedUnion::new(nums_a.move_iter(), nums_b.move_iter()).collect();
+    let got: Vec<u32> = SortedUnion::new(nums_a.into_iter(), nums_b.into_iter()).collect();
     assert_eq!(got, expected);
 
     let nums_a: Vec<u32> = vec![1, 3, 4, 5, 7, 9];
     let nums_b: Vec<u32> = vec![0, 2, 4, 6, 8];
-    let got: Vec<u32> = SortedUnion::new(nums_b.move_iter(), nums_a.move_iter()).collect();
+    let got: Vec<u32> = SortedUnion::new(nums_b.into_iter(), nums_a.into_iter()).collect();
     assert_eq!(got, expected);
 }
 
@@ -89,6 +89,6 @@ fn test_sorted_union_empty() {
 
     let nums_a: Vec<u32> = vec![];
     let nums_b: Vec<u32> = vec![];
-    let got: Vec<u32> = SortedUnion::new(nums_a.move_iter(), nums_b.move_iter()).collect();
+    let got: Vec<u32> = SortedUnion::new(nums_a.into_iter(), nums_b.into_iter()).collect();
     assert_eq!(got, expected);
 }

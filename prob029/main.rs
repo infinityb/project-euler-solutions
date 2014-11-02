@@ -38,5 +38,5 @@ fn test_euler_result() {
 
     let mut got = proditer.map(|(a, b)| pow(a, b)).collect::<Vec<BigInt>>();
     got.sort();
-    assert_eq!(iterlen(uniq(got.move_iter())), 15);
+    assert_eq!(iterlen(uniq(got.into_iter())), 15);
 }
